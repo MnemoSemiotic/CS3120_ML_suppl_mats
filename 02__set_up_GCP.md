@@ -49,8 +49,7 @@
 * Install dependencies for VNC connections
 
 ```bash
-~$ sudo apt-get install gnome-panel gnome-settings-daemon metacity nautilus 
-~$ gnome-terminal vnc4server
+~$ sudo apt-get install gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal vnc4server
 ```
 
 * Enable TCP ports
