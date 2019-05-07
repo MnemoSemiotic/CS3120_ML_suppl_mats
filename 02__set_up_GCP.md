@@ -156,10 +156,81 @@ nautilus &
 * Scroll through the endless docs, use the default location, hit enter or type yes for all prompts
 
 ### 2. Change your Python version to 3.65 (to support current TensorFlow)
-* close all terminals
-* open a new terminal
+
+* reload bash and test python
+
+```bash
+source ~/.bashrc
+```
 * install the new python version
 
 ```bash
 ~$ conda install python=3.6.5
+```
+
+
+## C. Using Git
+
+### 1. Check if Git is installed
+
+```bash
+~$ git --version`
+```
+
+* if git is not present on the system
+
+```bash
+~$ sudo apt-get install git-core
+```
+
+### 2. Set your git config Username
+
+```bash
+~$ git config --global user.email "you@example.com"
+~$ git config --global user.name "Your Name"
+```
+
+### 3. Clone a repo
+* obviously, replace the repo below with whatever your cloning
+
+```bash
+~$ git clone https://github.com/clownfragment/some_awesome_thing.git
+```
+
+### 4. Create and push the new branch
+* 
+
+```bash
+~$ git checkout -b feature_for_some_awesome_thing
+```
+
+```bash
+~$ git push origin feature_for_some_awesome_thing
+```
+
+### 5. Set your upstream and commit something
+* Let's start by making a quick file
+
+```bash
+~$ touch delme.tst
+```
+
+* Now let's set the upstream
+
+```bash
+~$ git push --set-upstream origin feature_for_some_awesome_thing
+```
+
+* Check the status of files that have changed
+
+```bash
+~$ git status
+```
+
+* Let's commit
+
+```bash
+~$ git add delme.tst
+~$ git commit -m 'add test file for push to new branch'
+~$ git push
 ```
